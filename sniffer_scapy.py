@@ -2,11 +2,12 @@ from scapy.all import sniff , PcapReader, wrpcap
 
 
 class SnifferScapy:
+    
     def __init__(self):
         self.captured_packets = []
         
         
-    def start_capture(self, interface='Ethernet', filter=''):
+    def start_capture(self, interface='any', filter=''):
         """Inicia la captura de paquetes"""
         
         print('[+]Captura de paquetes iniciada. Pulsa Ctrl + C para detener el proceso.')
@@ -15,7 +16,7 @@ class SnifferScapy:
             
             self.captured_packets = sniff(
                 iface = interface,
-                timeout=10,
+                #timeout=10,
                 filter = filter,
                 prn = lambda x: x.summary(),
                 store = True

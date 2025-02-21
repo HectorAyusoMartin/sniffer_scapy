@@ -34,4 +34,5 @@ NOTAS:
 2- La Libreria Scapy, mucho mas estable para hacer sniffing de paquetes de red que PyShark.
 
 3- TODO: imposible controlar la excepcion KeyboardInterrupt. Timeout de 10 sec para finalizar la captura de paquetes
+         Commit2: Solucionado. Estaba mal configurada la interfaz de red.
 
