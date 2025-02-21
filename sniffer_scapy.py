@@ -57,7 +57,7 @@ class SnifferScapy:
                 for field in layer.fields_desc:
                     field_name = field.name
                     field_value = layer.getfieldval(field_name)
-                    if text in field_name or text in field_value:
+                    if text in field_name or text in str(field_value):
                         filtered_packets.append(pkt)
                         found = True
                         break
